@@ -8,7 +8,7 @@
 	  return !isNaN(parseFloat(n)) && isFinite(n);
 	};
 
-	function formatDistance (distance) {
+	function formatDistance () {
 		return function (distance) {
 			var numDistance, unit;
 			if (distance && _isNumeric(distance)) {
