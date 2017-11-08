@@ -1,0 +1,28 @@
+<navigation></navigation>
+
+<div class="container">
+	<page-header content="vm.pageHeader"></page-header>
+
+	<div class="row">
+		<div class="col-md-6 col-sm-12">
+			<p class="lead">Уже зарегистрированы? Пожалуйста <a href="/#login?page={{ vm.returnPage }}">авторизуйтесь</a></p>
+			<form ng-submit="vm.onSubmit()">
+				<div role="alert" ng-show="vm.formError" class="alert alert-danger">{{ vm.formError }}</div>
+				<div class="form-group">
+					<label for="name">Полное имя:</label>
+					<input type="text" class="form-control" id="name" placeholder="Введите имя" ng-model="vm.credentials.name">
+				</div>
+				<div class="form-group">
+					<label for="email">Адрес электронной почты:</label>
+					<input type="text" class="form-control" id="email" placeholder="Введите адрес электронной почты" ng-model="vm.credentials.email">
+				</div>
+				<div class="form-group">
+					<label for="password">Пароль:</label>
+					<input type="password" class="form-control" id="password" placeholder="Введите пароль" ng-model="vm.credentials.password">
+				</div>
+				<button type="submit" class="btn btn-default">Зарегистрироваться!</button>
+			</form>
+		</div>
+	</div>
+	<footer-generic></footer-generic>
+</div>

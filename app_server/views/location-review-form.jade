@@ -1,0 +1,29 @@
+extends layout
+block content
+	.row.page-header
+		.col-lg-12
+			h1= pageHeader.title
+	.row
+		.col-xs-12.col-md-6
+			form.form-horizontal(action="#url",	method="post",	role="form")
+				-	if	(error	==	"val")
+					.alert.alert-danger(role="alert") Все поля формы обязательный.
+				.form-group
+					label.col-xs-10.col-sm-2.control-label(for="name")	Имя
+					.col-xs-12.col-sm-10
+						input#name.form-control(name="name")
+				.form-group
+					label.col-xs-10.col-sm-2.control-label(for="rating")	Рейтинг
+					.col-xs-12.col-sm-2
+						select#rating.form-control.input-sm(name="rating")
+							option 5
+							option 4
+							option 3
+							option 2
+							option 1
+				.form-group
+					label.col-sm-2.control-label(for="review") Отзыв
+					.col-sm-10
+						textarea#review.form-control(name="review", rows="5")
+				button.btn.btn-default.pull-right	Оставить отзыв
+			.col-xs-12.col-md-4
